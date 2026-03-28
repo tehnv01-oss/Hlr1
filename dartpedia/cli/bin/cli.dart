@@ -1,4 +1,5 @@
 import 'dart:io'; // Add this line at the top
+import 'package:http/http.dart' as http; // Add this line
 const version = '0.0.1';
 
 void main(List<String> arguments) {
