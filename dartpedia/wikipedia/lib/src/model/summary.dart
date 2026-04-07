@@ -1,4 +1,4 @@
-import 'title_set.dart';
+import '../title_set.dart';
 
 class Summary {
   /// Returns a new [Summary] instance.
