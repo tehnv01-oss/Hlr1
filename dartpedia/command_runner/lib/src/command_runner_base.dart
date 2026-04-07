@@ -6,8 +6,9 @@ import 'arguments.dart';
 import 'exceptions.dart'; // Add this line
 
 
-class CommandRunner {
 
+class CommandRunner {
+  // Add a constructor that accepts the optional callback.
   CommandRunner({this.onError});
 
   final Map<String, Command> _commands = <String, Command>{};
@@ -38,6 +39,7 @@ class CommandRunner {
 }
 
 
+
   void addCommand(Command command) {
     // TODO: handle error (Commands can't have names that conflict)
     _commands[command.name] = command;
@@ -45,6 +47,7 @@ class CommandRunner {
   }
 
   // [Step 6 update] This method is replaced entirely.
+// [Step 6 update] This method is replaced entirely.
 ArgResults parse(List<String> input) {
   ArgResults results = ArgResults();
   if (input.isEmpty) return results;
@@ -144,13 +147,3 @@ String _removeDash(String input) {
   return input;
 }
 
-
-  // Returns usage for the executable only.
-  // Should be overridden if you aren't using [HelpCommand]
-  // or another means of printing usage.
-
-  String get usage {
-    final exeFile = Platform.script.path.split('/').last;
-    return 'Usage: dart bin/$exeFile <command> [commandArg?] [...options?]';
-  }
-}

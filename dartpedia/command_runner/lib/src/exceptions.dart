@@ -1,6 +1,3 @@
-
-
-
 class ArgumentException extends FormatException {
   /// The command that was parsed before discovering the error.
   ///
