@@ -1,7 +1,10 @@
+# ... (existing content) ...
 name: wikipedia
 description: A sample command-line application.
 version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+resolution: workspace # Add this line
+# ... (existing content) ...
+
 
 environment:
   sdk: ^3.11.3
